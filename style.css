@@ -1,0 +1,245 @@
+body{
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    color: #000000;
+    margin: 0;
+    line-height: 1.5;
+}
+.checkbox-container {
+    position: absolute;
+    top: 1em;
+    right: 2em;
+}
+input[type="checkbox"] {
+    width: auto;
+    height: auto;
+    margin: 0.5em;
+    cursor: pointer;
+    z-index: 10;
+    position: relative;
+}
+header { 
+    font-size: 150%;
+    font-weight: 200;
+    text-align: center;
+    height: 25%;
+}
+h1 {
+    margin-bottom: 0;
+}
+header h2 {
+    margin-top: .2em;
+}
+#ash {
+    font-family: "Ibarra Real Nova", serif;
+    font-optical-sizing: auto;
+    text-decoration-line: line-through;
+    color: #000000;
+}
+#ash:hover {
+    color: #6524FF;
+    font-weight: 150;
+}
+
+#nav {
+    height: 15%;
+    list-style-type: disc;
+    text-decoration: none;
+    padding: 1em;
+}
+.active {
+    border: #6524FF solid 2px;
+    font-weight: 550;
+}
+li a:hover {
+    color: #6524FF;
+    border: #6524FF dashed 1px;
+    font-weight: 550;
+}
+li {
+    font-size: 150%;
+}
+li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 350;
+    padding: 0 1em 0 .5em;
+}
+li::marker {
+    color: #6524FF;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+section{
+    grid-column: 2;
+    font-size: 125%;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    margin: 5em 5em 5em 0;
+}
+
+.project {
+    position: relative;
+    margin: 3em 1em;
+    float: right;
+}
+.project article {
+    float: left;
+}
+.project h2 {
+    font-size: 85%;
+    margin: 1em;
+}
+.project a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 200%;
+    font-weight: 350;
+    padding: 0 1em 0 .5em;
+}
+.project a:hover {
+    border: #6524FF dashed 1px;
+    font-weight: 550;
+}
+.scrollable {
+    height: 290px;
+    overflow: auto;
+}
+.scrollable::-webkit-scrollbar {
+    width: 7px; 
+}
+.scrollable::-webkit-scrollbar-thumb {
+    background-color: #6524FF;
+    border-radius: 10px;
+}
+.scrollable::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+.invisible {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+article {
+float: right;
+font-size: 150%;
+}
+article h2 {
+float: left;
+font-size: 150%;
+}
+article h2 a {
+text-decoration: none;
+color: #6524FF;
+font-weight: 350;
+padding: 0 1em 0 .5em;
+}
+#social a{
+text-decoration: none;
+color: #000000;
+font-size: 200%;
+font-weight: 350;
+padding: 0 1em 0 .5em;
+}
+#LI {
+    margin-left: 15em;
+}
+#GH {
+    margin-left: 10em;
+}
+#email {
+    margin-left: 3em;
+}
+ #social h3:hover {
+ will-change: transition;
+  animation: 
+    bounce 400ms 
+    alternate infinite 
+    cubic-bezier(.2, .65, .6, 1) 0.3s;
+    animation-iteration-count: 6;
+ }
+ #social a:hover {
+    border: #6524FF dashed 1px;
+    font-weight: 550;
+ }
+
+aside {
+    grid-column: 1;
+    position: fixed;
+    height: 50%;
+    width: 25%;
+    margin: 3em 2em;
+    border-left: #6524FF solid 2px;
+    border-bottom: #6524FF solid 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+#headshot {
+    border-radius: 50%;
+    width: 65%;
+    height: auto;
+    margin: 2em;
+    opacity: 75%;
+}
+aside h3 {
+    font-size: 150%;
+    font-weight: 550;
+    margin: 1em;
+}
+#certs {
+    list-style: none;
+    margin: 2em;
+    align-items: right;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    height: 5%;
+}
+
+
+/** animation keyframes */
+@keyframes bounce { /*horizontal bounce */
+    from {
+      transform: translate(0px);
+    }
+    to {
+      transform: translate(-20px);
+    }
+  }
+  @keyframes bouncey {  /*vertical bounce */
+    from {
+      transform: translate(0px);
+    }
+    to {
+      transform: translateY(-30px);
+    }
+  }
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
