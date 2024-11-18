@@ -8,6 +8,42 @@ body{
     margin: 0;
     line-height: 1.5;
 }
+#particle-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+.particle {
+    position: absolute;
+    width: 3px;
+    height: 4px;
+    background-color: #d8c19b;
+    border-radius: 50%;
+    opacity: 0.4;
+    animation: float 20s ease infinite;
+}
+.particle2 {
+    position: absolute;
+    width: 5px;
+    height: 4px;
+    background-color: #d8c19b;
+    border-radius: 50%;
+    opacity: 0.4;
+    animation: float2 10s ease infinite;
+}
+.particle3 {
+    position: absolute;
+    width: 5px;
+    height: 3px;
+    background-color: #d8c19b;
+    border-radius: 50%;
+    opacity: 0.4;
+    animation: float3 15s ease infinite;
+}
 .checkbox-container {
     position: absolute;
     top: 1em;
@@ -21,10 +57,7 @@ input[type="checkbox"] {
     z-index: 10;
     position: relative;
 }
-header {  
-    position: sticky;
-    top: 0;
-    overflow: hidden;
+header { 
     font-size: 150%;
     font-weight: 200;
     text-align: center;
@@ -48,9 +81,6 @@ header h2 {
 }
 
 #nav {
-    position: sticky;
-    top: 20%;
-    overflow: hidden;
     height: 15%;
     list-style-type: disc;
     text-decoration: none;
@@ -77,30 +107,29 @@ li a {
 li::marker {
     color: #6524FF;
 }
-
+main{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
 section{
+    grid-column: 2;
     font-size: 125%;
-    position: fixed;
     bottom: 0;
     right: 0;
-    width: 50%;
-    margin: 11em 10em;
+    margin: auto;
 }
-section .project {
-    bottom: 0;
-    right: 0;
-    width: 50%;
-    margin: 5em 10em;
+#bio {
+    width: 80%;
 }
-
 .project {
     position: relative;
+    width: 95%;
     margin: 3em 1em;
     float: right;
-    width: 50%;
 }
 .project article {
     float: left;
+    width: 80%;
 }
 .project h2 {
     font-size: 85%;
@@ -116,6 +145,21 @@ section .project {
 .project a:hover {
     border: #6524FF dashed 1px;
     font-weight: 550;
+    position: relative;
+}
+.accessibility:hover::after {
+    content: url(../images/WebAccessibility.webp);
+    display: block;
+    position: absolute;
+    right: -325px;
+    top: 25px;
+}
+.quotes:hover::after {
+    content: url(../images/Quote.webp);
+    display: block;
+    position: absolute;
+    right: -325px;
+    top: 25px;
 }
 .scrollable {
     height: 290px;
@@ -157,13 +201,13 @@ font-weight: 350;
 padding: 0 1em 0 .5em;
 }
 #LI {
-margin-left: 15em;
+    margin-left: 15em;
 }
 #GH {
     margin-left: 10em;
 }
 #email {
-    margin-left: 5em;
+    margin-left: 3em;
 }
  #social h3:hover {
  will-change: transition;
@@ -179,12 +223,11 @@ margin-left: 15em;
  }
 
 aside {
+    grid-column: 1;
     position: fixed;
-    bottom: 0;
-    left: 0;
     height: 50%;
-    width: 25%;
-    margin: 3em 2em;
+    width: 20%;
+    margin: 0 2em;
     border-left: #6524FF solid 2px;
     border-bottom: #6524FF solid 2px;
     display: flex;
@@ -212,7 +255,6 @@ aside h3 {
 footer {
     position: fixed;
     bottom: 0;
-    overflow: hidden;
     width: 100%;
     text-align: center;
     height: 5%;
@@ -246,6 +288,31 @@ footer {
     }
     100% {
         background-position: 0% 50%;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    100% {
+        transform: translateY(-100vh)   translateX(100vw);
+    }
+}
+@keyframes float2 {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    100% {
+        transform: translateY(100vh)   translateX(-100vw);
+    }
+}
+@keyframes float3 {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translate(100vh);
     }
 }
 

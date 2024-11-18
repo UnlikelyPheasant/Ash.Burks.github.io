@@ -6,14 +6,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Welcome to the homepage of Ash Burks, a Florida-based web developer and programmer. Learn about Ash's background, current role at UFIT, and passion for creating accessible and artistic websites.">
         <link rel="stylesheet" type="text/css" href="styles/style.css">
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script type="text/javascript" src="js/script.js" defer></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Inconsolata:wght@200..900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
     </head>
 <body>
+    <div id="particle-container">
     <div class="checkbox-container">
         <label><input type="checkbox" id="checkbox1">Light Mode</label>
         <label><input type="checkbox" id="checkbox2">Dark Mode</label>
@@ -33,13 +32,15 @@
     </nav>
     <main>
         <section>
-            <p>I am a Florida based web developer and programmer.</p>
-            <p> My current position is as a web assistant at UFIT (University of Florida Information Technology). 
-                I am also a student at Santa Fe College in the Programming and Analysis A.S degree, I will be graduating with this degree as well as two vocational certificates in Summer 2025.
-            </p>
-            <p>I especially passionate about web development and object oriented programming, I am working towards my goal of developing a signature style of aesthetic and accessible websites that 
-                combine unique artistic flair along with a mindfullnes for all users.
-            </p>
+            <div id="bio">
+                <p>I am a Florida based web developer and programmer.</p>
+                <p> My current position is as a web assistant at UFIT (University of Florida Information Technology). 
+                    I am also a student at Santa Fe College in the Programming and Analysis A.S degree, I will be graduating with this degree as well as two vocational certificates in Summer 2025.
+                </p>
+                <p>I am especially passionate about web development/design and object oriented programming, I am working towards my goal of developing a signature style of aesthetic and accessible websites that 
+                    combine unique artistic flair along with a mindfullnes for all users.
+                </p>
+            </div>
            </section>
         <aside>
             <div id="Certificates">
@@ -57,5 +58,8 @@
     <footer>
         <p>&copy; 2024 Ash Burks</p>
     </footer>
+</div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="js/script.js" defer></script>
 </body>
 </html>
