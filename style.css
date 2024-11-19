@@ -8,6 +8,42 @@ body{
     margin: 0;
     line-height: 1.5;
 }
+#particle-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+.particle {
+    position: absolute;
+    width: 3px;
+    height: 4px;
+    background-color: #d8c19b;
+    border-radius: 50%;
+    opacity: 0.4;
+    animation: float 20s ease infinite;
+}
+.particle2 {
+    position: absolute;
+    width: 5px;
+    height: 4px;
+    background-color: #d8c19b;
+    border-radius: 50%;
+    opacity: 0.4;
+    animation: float2 10s ease infinite;
+}
+.particle3 {
+    position: absolute;
+    width: 5px;
+    height: 3px;
+    background-color: #d8c19b;
+    border-radius: 50%;
+    opacity: 0.4;
+    animation: float3 15s ease infinite;
+}
 .checkbox-container {
     position: absolute;
     top: 1em;
@@ -25,7 +61,7 @@ header {
     font-size: 150%;
     font-weight: 200;
     text-align: center;
-    height: 25%;
+    height: 15%;
 }
 h1 {
     margin-bottom: 0;
@@ -45,10 +81,21 @@ header h2 {
 }
 
 #nav {
-    height: 15%;
+    height: 25%;
     list-style-type: disc;
     text-decoration: none;
     padding: 1em;
+}
+.mobile-menu {
+    display: none;
+}
+#menuToggle {
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    display: none;
 }
 .active {
     border: #6524FF solid 2px;
@@ -73,7 +120,7 @@ li::marker {
 }
 main{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
 }
 section{
     grid-column: 2;
@@ -81,16 +128,19 @@ section{
     bottom: 0;
     right: 0;
     margin: auto;
-    margin: 5em 5em 5em 0;
 }
-
+#bio {
+    width: 80%;
+}
 .project {
     position: relative;
+    width: 95%;
     margin: 3em 1em;
     float: right;
 }
 .project article {
     float: left;
+    width: 100%;
 }
 .project h2 {
     font-size: 85%;
@@ -106,6 +156,21 @@ section{
 .project a:hover {
     border: #6524FF dashed 1px;
     font-weight: 550;
+    position: relative;
+}
+.accessibility:hover::after {
+    content: url(../images/WebAccessibility.webp);
+    display: block;
+    position: absolute;
+    right: -325px;
+    top: 25px;
+}
+.quotes:hover::after {
+    content: url(../images/Quote.webp);
+    display: block;
+    position: absolute;
+    right: -325px;
+    top: 25px;
 }
 .scrollable {
     height: 290px;
@@ -131,7 +196,6 @@ font-size: 150%;
 }
 article h2 {
 float: left;
-font-size: 150%;
 }
 article h2 a {
 text-decoration: none;
@@ -172,8 +236,8 @@ aside {
     grid-column: 1;
     position: fixed;
     height: 50%;
-    width: 25%;
-    margin: 3em 2em;
+    width: 20%;
+    margin: 0 2em;
     border-left: #6524FF solid 2px;
     border-bottom: #6524FF solid 2px;
     display: flex;
