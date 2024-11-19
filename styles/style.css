@@ -322,3 +322,32 @@ footer {
         transition: none !important;
     }
 }
+@media only screen and (min-width: 950px) and (max-width: 1200px) {
+    section {
+        font-size: 100%;
+    } 
+    .project h2 { 
+        font-size: 75%;
+    }
+    .project a  { 
+        font-size: 190%;
+    }
+}
+@media only screen and (max-width: 1340px)  {
+    header {
+        font-size: 125%;
+    }
+    li {
+        font-size: 125%;
+    }
+    section {
+        font-size: 115%;
+    }
+    .project a  { 
+        font-size: 170%;
+    }
+    aside h3{
+        font-size: 115%;
+        margin: 0 1em;
+    }
+}
