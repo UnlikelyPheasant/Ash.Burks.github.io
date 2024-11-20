@@ -342,6 +342,8 @@ footer {
         grid-template-rows: repeat(5, 1fr);
         grid-template-columns: 1fr;
         height: max-content;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
     .checkbox-container {
         grid-row: 1;
@@ -376,6 +378,7 @@ footer {
         grid-template-columns: 1fr;
         width: 100%;
         margin: auto;
+        overflow-y: auto;
     }
     section {
         grid-column: 1;
