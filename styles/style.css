@@ -162,14 +162,14 @@ section{
     content: url(../images/WebAccessibility.webp);
     display: block;
     position: absolute;
-    right: -325px;
+    right: -300px;
     top: 25px;
 }
 .quotes:hover::after {
     content: url(../images/Quote.webp);
     display: block;
     position: absolute;
-    right: -325px;
+    right: -300px;
     top: 25px;
 }
 .scrollable {
@@ -336,11 +336,12 @@ footer {
 @media only screen and (max-width: 600px) {
 
 }
-@media only screen and (min-width: 601px) and (max-width: 949px) {
+@media only screen and (max-width: 949px) {
     body {
         display: grid;
         grid-template-rows: repeat(5, 1fr);
         grid-template-columns: 1fr;
+        height: max-content;
     }
     .checkbox-container {
         grid-row: 1;
@@ -350,18 +351,73 @@ footer {
     }
     header {
         grid-row: 2;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
         width: 100%;
-        height: 5vh;
+        height: 10vh;
         font-size: 100%;
-        align-items: left;
+        float: left;
+        margin-bottom: 2em;
     }
-    #nav {display: none;}
+    header h1 {
+        grid-row: 1;
+        width: 50%;
+    }
+    header h2 {
+        grid-row: 2;
+        width: 75%;
+    }
+    #nav {
+        grid-row: 3;
+        display: none;}
+    main {
+        grid-row: 4;
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        margin: auto;
+    }
+    section {
+        grid-column: 1;
+        width: 100%;
+        margin: 2em;
+    }
+    .project {
+        width: 100%;
+        margin: 1em;
+        height: max-content;
+    }
+    #social h3 {
+        font-size: 100%;
+        margin: auto;
+    }
+    #social a {
+        font-size: 150%;
+    }
+    #headshot {
+        width: 25vw;
+    }
+    aside {
+        grid-column: 1;
+        position: relative;
+        width: 100%;
+        margin: 2em;
+        padding-top: 2em;
+        border: none;
+    }
+    footer {
+        grid-row: 4;
+        width: 100%;
+        padding-top: 2em;
+        height: max-content;
+        position: absolute;
+    } 
     /* Mobile menu styles */
     .mobile-menu {
         display: none;
         position: absolute;
         top: 0;
-        left: 0;
+        right: 0;
         width: 100%;
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.8);
@@ -369,12 +425,15 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        color: ffffff;
     }
     #menuToggle {
         background-color: transparent;
         color: #6524FF;
         font-size: 150%;
         margin: 2em 1em;
+        float: right;
+        top: 20;
         border: none;
         display: block;
         cursor: pointer;
@@ -388,26 +447,6 @@ footer {
         margin: 1em 0;
         text-decoration: none;
     }
-    main {
-        grid-row: 3;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 2fr 1fr;
-    }
-    section {
-        grid-row: 1;
-        width: 100%;
-        margin: auto;
-    }
-    aside {
-        grid-row: 2;
-        width: 100%;
-        border: none;
-    }
-    footer {
-        grid-row: 4;
-        width: 100%;
-    } 
 }
 
 @media only screen and (min-width: 950px) and (max-width: 1200px) {
