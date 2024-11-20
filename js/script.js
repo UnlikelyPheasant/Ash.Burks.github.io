@@ -28,7 +28,7 @@ $(document).ready(function() {
     });
 
     function applyLightTheme() {
-        $('#particle-container').css({
+        $('.main-content').css({
             'background-color': '#FBF6EE',
             'background': 'linear-gradient(-45deg, #FDFAF7, #FBF6EE, #EED9B9, #FBF6EE, #FDFAF7)',
             'background-size': '400% 600%',
@@ -42,7 +42,7 @@ $(document).ready(function() {
     }
 
     function applyDarkTheme() {
-        $('#particle-container').css({
+        $('.main-content').css({
             'background-color': '#121212',
             'background': 'linear-gradient(-45deg, #2B2B2B, #121212, #000000, #121212, #2B2B2B)',
             'background-size': '400% 600%',
