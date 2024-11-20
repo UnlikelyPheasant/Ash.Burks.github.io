@@ -38,6 +38,7 @@ $(document).ready(function() {
         $('#ash').css('color', '#000000');
         $("a").css('color', '#000000');
         $('#checkbox1').css({'accent-color' : '#000000'});
+        $('.mobile-menu a').css('color', '#FFFFFF');
     }
 
     function applyDarkTheme() {
@@ -76,4 +77,8 @@ document.addEventListener('DOMContentLoaded', () => {
     createParticles('particle3');
 
     particleContainer.appendChild(fragment);
+});
+
+document.getElementById('menuToggle').addEventListener('click', function() {
+    document.getElementById('mobileMenu').classList.toggle('active');
 });
