@@ -50,9 +50,10 @@ body{
     animation: float3 15s ease infinite;
 }
 .checkbox-container {
-    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1em;
     top: 1em;
-    right: 2em;
 }
 input[type="checkbox"] {
     width: auto;
@@ -356,9 +357,9 @@ footer p {
     }
     .checkbox-container {
         grid-row: 1;
-        width: 100%;
         display: flex;
         justify-content: flex-end;
+        margin-right: 1em;
     }
     header {
         grid-row: 2;
