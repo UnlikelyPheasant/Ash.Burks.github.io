@@ -5,7 +5,7 @@ body {
     font-style: normal;
     margin: 0;
     padding: 0;
-    background: linear-gradient(#e7e7e7 50%, #89ce00 50%); ;
+    background: linear-gradient(#e7e7e7 40%, #89ce00 100%);
     line-height: 1.5;
     color: #000000;
 }
