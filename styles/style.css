@@ -134,6 +134,7 @@ section{
     bottom: 0;
     right: 0;
     margin: auto;
+    margin-bottom: 2.5em;
 }
 #bio {
     width: 80%;
@@ -202,6 +203,9 @@ font-size: 200%;
 font-weight: 350;
 padding: 0 1em 0 .5em;
 }
+.Icon {
+    display: none;
+}
 #LI {
     margin-left: 15em;
 }
@@ -209,7 +213,7 @@ padding: 0 1em 0 .5em;
     margin-left: 10em;
 }
 #email {
-    margin-left: 5em;
+    margin-left: 3em;
 }
  #social h3:hover {
  will-change: transition;
@@ -236,6 +240,7 @@ aside {
     flex-direction: column;
     justify-content: flex-end;
 }
+
 #headshot {
     border-radius: 50%;
     width: 65%;
@@ -328,10 +333,155 @@ footer p {
     }
 }
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-
+@media only screen and (max-width: 666px) {
+    body {
+        display: grid;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: 1fr;
+        overflow-y: auto;
+    }
+    .main-content{
+        overflow-y: auto;
+    }
+    .checkbox-container {
+        grid-row: 1;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 1em;
+    }
+    header {
+        grid-row: 2;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        width: 100%;
+        height: 10vh;
+        font-size: 100%;
+        float: left;
+        margin: 0 1em;
+    }
+    header h1 {
+        grid-row: 1;
+        width: 50%;
+    }
+    header h2 {
+        grid-row: 2;
+        width: 75%;
+    }
+    #nav {
+        grid-row: 3;
+        display: none;}
+    main {
+        grid-row: 4;
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        margin: auto;
+        overflow-x: hidden;
+    }
+    section {
+        grid-column: 1;
+        width: 100%;
+        margin: 2em;
+    }
+    .project {
+        overflow: visible;
+        width: 100%;
+        margin: 1em;
+        height: 50vh;
+    }
+    .project h2 a {
+        font-size: 125%;
+    }
+    #social {
+        height: 25vh;
+        width: 90%;
+        display: flex;
+    }
+    #LI {
+        display: none;
+    }
+    #GH {
+        display: none;
+    }
+    #email {
+        display: none;
+    }
+    #resume {
+        display: none;
+    }
+    .Icon {
+        display: block;
+        margin: .5em auto;
+    }
+    .Icon i {
+        font-size: 8vw;
+    }
+    #social h3 {
+        font-size: 100%;
+        margin: auto;
+    }
+    #social a {
+        font-size: 125%;
+        margin: auto;
+    }
+    #headshot {
+        width: 25vw;
+        margin: auto;
+        border-left: #6524FF solid 2px;
+        border-bottom: #6524FF solid 3px;
+    }
+    aside {
+        grid-column: 1;
+        position: relative;
+        width: 100%;
+        margin: 2em;
+        padding-top: 3em;
+        border: none;
+    }
+    footer {
+        grid-row: 4;
+        width: 100%;
+        padding-top: 2em;
+        height: max-content;
+        position: relative;
+    } 
+    /* Mobile menu styles */
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 2;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+    }
+    #menuToggle {
+        background-color: transparent;
+        color: #6524FF;
+        font-size: 150%;
+        margin: 2em 1em;
+        float: right;
+        top: 20px;
+        border: none;
+        display: block;
+        cursor: pointer;
+    }
+    .mobile-menu.active {
+        display: flex;
+    }
+    .mobile-menu a {
+        color: #6524FF;
+        font-size: 2em;
+        margin: 1em 0;
+        text-decoration: none;
+    }
 }
-@media only screen and (max-width: 949px) {
+@media only screen and (min-width: 667px) and (max-width: 949px) {
     body {
         display: grid;
         grid-template-rows: repeat(5, 1fr);
@@ -394,15 +544,27 @@ footer p {
         height: 25vh;
         width: 90%;
     }
+    #LI {
+        margin-left: 17em;
+    }
+    #GH {
+        margin-left: 12em;
+    }
+    #email {
+        margin-left: 7em;
+    }
+    #resume {
+        margin-left: 2em;
+    }
     #social h3 {
         font-size: 100%;
-        margin: auto;
     }
     #social a {
         font-size: 125%;
     }
     #headshot {
         width: 25vw;
+        margin: auto;
         border-left: #6524FF solid 2px;
         border-bottom: #6524FF solid 3px;
     }
@@ -469,7 +631,7 @@ footer p {
         font-size: 190%;
     }
 }
-@media only screen and (max-width: 1340px)  {
+@media only screen and (min-width: 1201px) and (max-width: 1340px)  {
     header {
         font-size: 125%;
     }
