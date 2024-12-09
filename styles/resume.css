@@ -140,18 +140,27 @@ footer p {
     grid-column: 1;
     text-align: center;
 }
+#email a:hover {
+    color: #b51963;
+    font-weight: 800;
+}
 #phone {
     grid-column: 2;
     text-align: center;
-
 }
 #linkedin {
     grid-column: 3;
     text-align: center;
-
+}
+#linkedin a:hover {
+    color: #b51963;
+    font-weight: 800;
 }
 #portfolio {
     grid-column: 4;
     text-align: center;
-
+}
+#portfolio a:hover {
+    color: #b51963;
+    font-weight: 800;
 }
