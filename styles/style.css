@@ -235,7 +235,6 @@ aside {
     width: 20%;
     margin: 0 2em;
     border-left: #6524FF solid 2px;
-    border-bottom: #6524FF solid 2px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
