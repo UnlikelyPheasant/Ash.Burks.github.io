@@ -207,13 +207,13 @@ padding: 0 1em 0 .5em;
     display: none;
 }
 #LI {
-    margin-left: 15em;
+    margin-left: 12em;
 }
 #GH {
-    margin-left: 10em;
+    margin-left: 8em;
 }
 #email {
-    margin-left: 3em;
+    margin-left: 4em;
 }
  #social h3:hover {
  will-change: transition;
